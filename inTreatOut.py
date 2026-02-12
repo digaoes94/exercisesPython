@@ -39,3 +39,8 @@ import math
 # hours_month = float(input("And how many hours do you work per month? "))
 # print(f"Your monthly pay is R$ {pay_hour * hours_month : .2f}.")
 
+# Question 7. Knowing someone's height, calculate that person's ideal weigth for a woman (62,1 * HEIGHT - 44,7) and a man (72,7 * HEIGHT - 58)
+# height = float(input("Please state your height: "))
+# w_woman = 62.1 * height - 44.7
+# w_man = 72.7 * height - 58.0
+# print(f"If you are a woman, you ideal weigth is {w_woman : .2f}.\nIf you are a man, you ideal weigth is {w_man : .2f}.")
