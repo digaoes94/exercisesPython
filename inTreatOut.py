@@ -4,7 +4,6 @@
 
 # Question 2. Ask for four grades and print the student's final grade
 # finalGrade = 0.0; grades = 0
-
 # finalGrade += float(input("Grade1: "))
 # grades += 1
 # finalGrade += float(input("Grade2: "))
@@ -16,10 +15,12 @@
 # print(f"Student's final grade = {finalGrade/grades}")
 
 # REFINEMENT Question 2
-x = 0; finalGrade = 0.0; grades = 0
+# x = 0; finalGrade = 0.0; grades = 0
+# for x in range(1, 5):
+#     finalGrade += float(input(f"Grade{x}: "))
+#     grades +=1
+# print(f"Student's final grade = {finalGrade/grades}")
 
-for x in range(1, 5):
-    finalGrade += float(input(f"Grade{x}: "))
-    grades +=1
-
-print(f"Student's final grade = {finalGrade/grades}")
+# Question 3. Do a code that translates meters to centimeters
+meters = float(input("Inform how much meters: "))
+print(meters*100)
