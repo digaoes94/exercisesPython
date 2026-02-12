@@ -48,17 +48,22 @@ import math
 # Question 8. Ask for User's pay per hour and how much hours he works per month, calculate and print hers/his monthly brute pay, discount 11% for IR,
 # 8% for INSS and 5% for worker's union. Finally, show the liquid pay.
 
-pay_hour = float(input("How much are you paid per worked hour? "))
-hours_month = float(input("And how many hours do you work per month? "))
+# pay_hour = float(input("How much are you paid per worked hour? "))
+# hours_month = float(input("And how many hours do you work per month? "))
 
-brute_pay = pay_hour * hours_month
-d_IR = brute_pay * 0.11
-d_INSS = brute_pay * 0.08
-d_UNION = brute_pay * 0.05
-liquid_pay = brute_pay - d_IR - d_INSS - d_UNION
+# brute_pay = pay_hour * hours_month
+# d_IR = brute_pay * 0.11
+# d_INSS = brute_pay * 0.08
+# d_UNION = brute_pay * 0.05
+# liquid_pay = brute_pay - d_IR - d_INSS - d_UNION
 
-print(f"+ Brute pay R$ {brute_pay : .2f}.")
-print(f"- IR discount R$ {d_IR : .2f}.")
-print(f"- INSS discount R$ {d_INSS : .2f}.")
-print(f"- UNION discount R$ {d_UNION : .2f}.")
-print(f"= Brute pay R$ {liquid_pay : .2f}.")
+# print(f"+ Brute pay R$ {brute_pay : .2f}.")
+# print(f"- IR discount R$ {d_IR : .2f}.")
+# print(f"- INSS discount R$ {d_INSS : .2f}.")
+# print(f"- UNION discount R$ {d_UNION : .2f}.")
+# print(f"= Brute pay R$ {liquid_pay : .2f}.")
+
+# Question 9. Ask for the User's monthly salary and the minimum salary, then calculate and print how much times he earns the minimum salary
+salary_user = float(input("Inform your monthly salary: "))
+salary_minimum = float(input("Inform the minimum salary: "))
+print(f"You earn {salary_user/salary_minimum : .2f}x the minimum salary.")
