@@ -1,3 +1,4 @@
+import math
 # Question 1. Ask the User for a number, read it and then print "The chosen number was:"
 # number = float(input("Type a number, whole or broken\n"))
 # print(f"The chosen number was: {number}")
@@ -22,5 +23,9 @@
 # print(f"Student's final grade = {finalGrade/grades}")
 
 # Question 3. Do a code that translates meters to centimeters
-meters = float(input("Inform how much meters: "))
-print(meters*100)
+# meters = float(input("Inform how much meters: "))
+# print(meters*100)
+
+# Question 4. Do a code that asks for a circle's radius and show it's area
+radius = float(input("Inform the circle's radius: "))
+print(f"Circle's area is {math.pi * radius**2:.4f}")
