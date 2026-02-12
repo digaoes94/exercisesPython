@@ -27,5 +27,11 @@ import math
 # print(meters*100)
 
 # Question 4. Do a code that asks for a circle's radius and show it's area
-radius = float(input("Inform the circle's radius: "))
-print(f"Circle's area is {math.pi * radius**2:.4f}")
+# radius = float(input("Inform the circle's radius: "))
+# print(f"Circle's area is {math.pi * radius ** 2 : .4f}")
+
+# Question 5. Ask for User's pay per hour and how much hours he works per month, then print hers/his monthly pay
+# pay_hour = float(input("How much are you paid per worked hour? "))
+# hours_month = float(input("And how many hours do you work per month? "))
+# print(f"Your monthly pay is R$ {pay_hour * hours_month : .2f}.")
+
