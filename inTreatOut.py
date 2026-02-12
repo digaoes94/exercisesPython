@@ -30,7 +30,11 @@ import math
 # radius = float(input("Inform the circle's radius: "))
 # print(f"Circle's area is {math.pi * radius ** 2 : .4f}")
 
-# Question 5. Ask for User's pay per hour and how much hours he works per month, then print hers/his monthly pay
+# Question 5. Calculate a square's area
+# side = float(input("Inform the square's side length: "))
+# print(f"That square has a area of {side ** 2} area.")
+
+# Question 6. Ask for User's pay per hour and how much hours he works per month, then print hers/his monthly pay
 # pay_hour = float(input("How much are you paid per worked hour? "))
 # hours_month = float(input("And how many hours do you work per month? "))
 # print(f"Your monthly pay is R$ {pay_hour * hours_month : .2f}.")
