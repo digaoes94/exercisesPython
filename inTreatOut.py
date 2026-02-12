@@ -70,11 +70,11 @@ import math
 
 # Question 10. Ask for the User's original debt (PRESENT VALUE), monthly rate and the number of months for complete payment,
 # then calculate the total that was paid (FUTURE VALUE). P.S.: use simple interest.
-pv = float(input("How much was the loan worth? "))
-i = float(input("How much was the monthly interest? ")) / 100.0
-n = float(input("How many months to complete payment? "))
-fv = pv + (pv * i * n)
-print(f"\nYou paid R$ {fv : .2f} for a R$ {pv : .2f} loan in simple interest.")
-# EXTRA! Value for compound interest
-fv2 = pv * ((1 + i) ** n)
-print(f"Luckly you didn't paid R$ {fv2 : .2f} from compounded interest.")
+# pv = float(input("How much was the loan worth? "))
+# i = float(input("How much was the monthly interest? ")) / 100.0
+# n = float(input("How many months to complete payment? "))
+# fv = pv + (pv * i * n)
+# print(f"\nYou paid R$ {fv : .2f} for a R$ {pv : .2f} loan in simple interest.")
+# # EXTRA! Value for compound interest
+# fv2 = pv * ((1 + i) ** n)
+# print(f"Luckly you didn't paid R$ {fv2 : .2f} from compounded interest.")
