@@ -82,19 +82,28 @@
 # Question 4. Create a program where the User can provide N numbers and insert those in a list, and then: a) print de numbers in decrescent order;
 # b) if the number 5 is in the list
 
-n = int(input("How many numbers will you digit? "))
-list = []
+# n = int(input("How many numbers will you digit? "))
+# list = []
 
-for m in range(n):
-    x = int(input(f"Inform the number {m+1}: "))
-    list.append(x)
-    m += 1
+# for m in range(n):
+#     x = int(input(f"Inform the number {m+1}: "))
+#     list.append(x)
+#     m += 1
 
-list.sort(reverse = True)
-for x in list:
-    print(x)
+# list.sort(reverse = True)
+# for x in list:
+#     print(x)
 
-if 5 in list:
-    print("5 is in the list")
-else:
-    print("5 isn't in the list")
+# if 5 in list:
+#     print("5 is in the list")
+# else:
+#     print("5 isn't in the list")
+
+# Question 5. Do a program that read a student's name and his final score, add those in a dictionary and then print the dictionary.
+dict = {}
+
+name = input("Type student's name: ")
+score = float(input("Type student's score: "))
+dict[name] = score
+
+print(dict)
