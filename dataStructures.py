@@ -100,10 +100,33 @@
 #     print("5 isn't in the list")
 
 # Question 5. Do a program that read a student's name and his final score, add those in a dictionary and then print the dictionary.
-dict = {}
+# dict = {}
 
-name = input("Type student's name: ")
-score = float(input("Type student's score: "))
-dict[name] = score
+# name = input("Type student's name: ")
+# score = float(input("Type student's score: "))
+# dict[name] = score
 
-print(dict)
+# print(dict)
+
+# Question 6. Do a program which will read N student's names and scores, and then print: a) highest score; b) lowest score; c) class's medium score
+n = int(input("How many students will be informed? "))
+name = ""; score = 0.0; dict = {}; lista = []
+
+for x in range(n):
+    name = input("Type student's name: ")
+    score = float(input("Type student's score: "))
+
+    dict[name] = score
+
+lista = list(dict.values())
+lista.sort()
+
+print("\n=====  Highest score  =====")
+print(lista[-1])
+
+print("=====  Lowest score  =====")
+print(lista[0])
+
+print("=====  Medium score  =====")
+medium = sum(lista)/len(lista)
+print(medium)
