@@ -29,3 +29,34 @@
 # except:
 #     print("São Paulo wasn't in the top 20.")
 
+# Question 2. Read 4 integer numbers, add them to a tuple and then print:
+# a) how many times the n9 appears in the tuple; b) the index from the first n3; c) which numbers are odd
+aList = []; odds = []; a = 1
+
+while a < 5:
+    print(f"Inform number {a}: ")
+    x = int(input())
+
+    if (x % 2) == 0:
+        odds.append(x)
+    
+    aList.append(x)
+    a += 1
+
+aTuple = tuple(aList)
+
+print("\n=====  N° of time the number 9 appears  =====")
+n9 = aTuple.count(9)
+print(f"The number 9 appears {n9} times within the tuple")
+
+print("\n=====  Index from first occurence from the number 3  =====")
+n3 = 0
+try:
+    print(f"First occurence of number 3 happens at index {aTuple.index(3)}")
+except:
+    print("The number 3 doesn't appear within the tuple")
+
+print("\n=====  Odd numbers  =====")
+for x in odds:
+    print(x)
+
