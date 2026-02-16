@@ -63,18 +63,38 @@
 # Question 3. Create a program where the User can provide N numbers and insert those in a list. If the number already exists in the list, do not add it.
 # After all N numbers where informed, print them in ascendent manner.
 
-n = int(input("How many numbers will you digit?"))
+# n = int(input("How many numbers will you digit?"))
+# list = []
+
+# for m in range(n):
+#     x = int(input(f"Inform the number {m+1}: "))
+
+#     if x not in list:
+#         list.append(x)
+    
+#     m += 1
+
+# list.sort()
+
+# for x in list:
+#     print(x)
+
+# Question 4. Create a program where the User can provide N numbers and insert those in a list, and then: a) print de numbers in decrescent order;
+# b) if the number 5 is in the list
+
+n = int(input("How many numbers will you digit? "))
 list = []
 
 for m in range(n):
     x = int(input(f"Inform the number {m+1}: "))
-
-    if x not in list:
-        list.append(x)
-    
+    list.append(x)
     m += 1
 
-list.sort()
-
+list.sort(reverse = True)
 for x in list:
     print(x)
+
+if 5 in list:
+    print("5 is in the list")
+else:
+    print("5 isn't in the list")
