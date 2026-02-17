@@ -109,24 +109,48 @@
 # print(dict)
 
 # Question 6. Do a program which will read N student's names and scores, and then print: a) highest score; b) lowest score; c) class's medium score
-n = int(input("How many students will be informed? "))
-name = ""; score = 0.0; dict = {}; lista = []
+# n = int(input("How many students will be informed? "))
+# name = ""; score = 0.0; dict = {}; lista = []
 
-for x in range(n):
-    name = input("Type student's name: ")
-    score = float(input("Type student's score: "))
+# for x in range(n):
+#     name = input("Type student's name: ")
+#     score = float(input("Type student's score: "))
 
-    dict[name] = score
+#     dict[name] = score
 
-lista = list(dict.values())
-lista.sort()
+# lista = list(dict.values())
+# lista.sort()
 
-print("\n=====  Highest score  =====")
-print(lista[-1])
+# print("\n=====  Highest score  =====")
+# print(lista[-1])
 
-print("=====  Lowest score  =====")
-print(lista[0])
+# print("=====  Lowest score  =====")
+# print(lista[0])
 
-print("=====  Medium score  =====")
-medium = sum(lista)/len(lista)
-print(medium)
+# print("=====  Medium score  =====")
+# medium = sum(lista)/len(lista)
+# print(medium)
+
+# Question 7. Do a program that removes even numbers from a list
+lista = []
+n = int(input("How many numbers will be informed? "))
+
+def noEvens(y: list):
+    i = 0
+
+    while i < len(y):
+        if y[i] % 2 == 0:
+            y.pop(i)
+        else:
+            i += 1
+
+for m in range(n):
+    x = int(input(f"Inform the number {m+1}: "))
+    lista.append(x)
+    m += 1
+
+print(f"Original list: {lista}")
+
+noEvens(lista)
+
+print(f"Updated list: {lista}")
