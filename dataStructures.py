@@ -108,7 +108,7 @@
 
 # print(dict)
 
-# Question 6. Do a program which will read N student's names and scores, and then print: a) highest score; b) lowest score; c) class's medium score
+# Question 6. Do a program which will read N student's names and scores, and then print: a) highest score; b) lowest score; c) class's average score
 # n = int(input("How many students will be informed? "))
 # name = ""; score = 0.0; dict = {}; lista = []
 
@@ -127,9 +127,9 @@
 # print("=====  Lowest score  =====")
 # print(lista[0])
 
-# print("=====  Medium score  =====")
-# medium = sum(lista)/len(lista)
-# print(medium)
+# print("=====  average score  =====")
+# average = sum(lista)/len(lista)
+# print(average)
 
 # Question 7. Do a program that removes even numbers from a list
 # lista = []
@@ -156,28 +156,61 @@
 # print(f"Updated list: {lista}")
 
 # Question 8. Create a program that stores 3 person with their phone number and their age, then print the info on all three, followed by the info of only one
-import random; persons = []
+# import random; persons = []
 
-class Person:
-    def __init__(self, name:str, phone:str, age:int):
-        self.name = name
-        self.phone = phone
-        self.age = age
+# class Person:
+#     def __init__(self, name:str, phone:str, age:int):
+#         self.name = name
+#         self.phone = phone
+#         self.age = age
 
-    def __str__(self):
-        return f"Name: {self.name}. Phone: {self.phone}. Age: {self.age}."
+#     def __str__(self):
+#         return f"Name: {self.name}. Phone: {self.phone}. Age: {self.age}."
 
-for x in range(1, 4):
-    name = input(f"Type Person {x} name: ")
-    phone = input(f"Type Person {x} phone: ")
-    age = int(input(f"Type Person {x} age: "))
-    someone = Person(name, phone, age)
+# for x in range(1, 4):
+#     name = input(f"Type Person {x} name: ")
+#     phone = input(f"Type Person {x} phone: ")
+#     age = int(input(f"Type Person {x} age: "))
+#     someone = Person(name, phone, age)
 
-    persons.append(someone)
+#     persons.append(someone)
 
-for x in persons:
-    print(x)
+# for x in persons:
+#     print(x)
 
-surprise = random.randint(0, 2)
-print(persons[surprise])
+# surprise = random.randint(0, 2)
+# print(persons[surprise])
+
+# Question 9. A kart track allows 10 laps for each of the 6 runners. Write a program that reads each runner's time in seconds and store these in a dictionary (runner's name as key).
+# By the end, print who had the best lap and which lap it was. Also print the ranking, having the best runner (the one with the smaller average lap time) as first.
+# MAIN STRUCT: dictionary{name, tuple}; SECOND STRUCT: tuple(times[], lowerTime, bestLap, average)
+import math; record = {}; bestTime = math.inf; bestLap = 0; bestRunner = ""
+
+for x in range(1,7):
+    times = []
+    runner = input(f"Runner n{x}name: ")
+
+    for y in range(1, 11):
+        time = float(input(f"Inform time in lap{y}: "))
+        times.append(time)
+
+        if time < bestTime:
+            bestTime = time
+            bestLap = y
+            bestRunner = runner
+
+    record[runner] = times
+
+ranking = []
+for runner, times in record.items():
+    average = sum(times)/len(times)
+    ranking.append((runner, average))
+
+ranking.sort(key=lambda x : x[1])
+
+print(f"Best Runner: {bestRunner}. Best Lap time {bestTime} at his {bestLap}° lap.")
+
+print("Ranking")
+for x in range(1, 7):
+    print(f"N° {x}: {ranking[x-1].key()} with average lap time of {ranking[x-1].value()}")
 
