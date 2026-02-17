@@ -132,25 +132,52 @@
 # print(medium)
 
 # Question 7. Do a program that removes even numbers from a list
-lista = []
-n = int(input("How many numbers will be informed? "))
+# lista = []
+# n = int(input("How many numbers will be informed? "))
 
-def noEvens(y: list):
-    i = 0
+# def noEvens(y: list):
+#     i = 0
 
-    while i < len(y):
-        if y[i] % 2 == 0:
-            y.pop(i)
-        else:
-            i += 1
+#     while i < len(y):
+#         if y[i] % 2 == 0:
+#             y.pop(i)
+#         else:
+#             i += 1
 
-for m in range(n):
-    x = int(input(f"Inform the number {m+1}: "))
-    lista.append(x)
-    m += 1
+# for m in range(n):
+#     x = int(input(f"Inform the number {m+1}: "))
+#     lista.append(x)
+#     m += 1
 
-print(f"Original list: {lista}")
+# print(f"Original list: {lista}")
 
-noEvens(lista)
+# noEvens(lista)
 
-print(f"Updated list: {lista}")
+# print(f"Updated list: {lista}")
+
+# Question 8. Create a program that stores 3 person with their phone number and their age, then print the info on all three, followed by the info of only one
+import random; persons = []
+
+class Person:
+    def __init__(self, name:str, phone:str, age:int):
+        self.name = name
+        self.phone = phone
+        self.age = age
+
+    def __str__(self):
+        return f"Name: {self.name}. Phone: {self.phone}. Age: {self.age}."
+
+for x in range(1, 4):
+    name = input(f"Type Person {x} name: ")
+    phone = input(f"Type Person {x} phone: ")
+    age = int(input(f"Type Person {x} age: "))
+    someone = Person(name, phone, age)
+
+    persons.append(someone)
+
+for x in persons:
+    print(x)
+
+surprise = random.randint(0, 2)
+print(persons[surprise])
+
