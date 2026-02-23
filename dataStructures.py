@@ -215,24 +215,34 @@
 #     print(f"N° {x}: {runner} with average lap time of {average:.2f}.")
 
 # Question 10. Write a code to store a telephone agenda in a dictionary. Each person may have 1+ phones, and the dictionary's key is the person's name.
-agenda = {}; phones = []
+# agenda = {}; phones = []
 
-qtd = int(input("Inform how many people you will add: "))
+# qtd = int(input("Inform how many people you will add: "))
 
-for x in range(qtd):
-    y = True
-    name = input(f"Inform n° {x+1} contact's name: ")
+# for x in range(qtd):
+#     y = True
+#     name = input(f"Inform n° {x+1} contact's name: ")
 
-    print("Inform all telephone numbers, one at a time, and type END to proceed to the next contact.")
-    while(y):
-        entry = input()
+#     print("Inform all telephone numbers, one at a time, and type END to proceed to the next contact.")
+#     while(y):
+#         entry = input()
 
-        if(entry == "END"):
-            y = False
-        else:
-            phones.append(entry)
+#         if(entry == "END"):
+#             y = False
+#         else:
+#             phones.append(entry)
     
-    agenda[name] = phones
-    phones = []
+#     agenda[name] = phones
+#     phones = []
 
-print(agenda)
+# print(agenda)
+
+# Question 11. Read 5 numbers, then print them. Data structure's choice is yours.
+aList = []
+
+for x in range(5):
+    n = int(input(f"Type entry n° {x+1}: "))
+    aList.append(n)
+
+print(aList)
+
