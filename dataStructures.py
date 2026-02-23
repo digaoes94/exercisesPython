@@ -279,19 +279,57 @@
 
 # Question 14. Write a program that receives the average temperature from each month of a year in order and store them in a list. After that, find the year's average temperature
 # and show all and in which month they happened. Choose a structure to collect your data.
-import calendar; monthAvgs = []; yearAvg = 0
+# import calendar; monthAvgs = []; yearAvg = 0
 
-months = {}
-for i in range(1, 13):
-    months[i] = calendar.month_name[i]
+# months = {}
+# for i in range(1, 13):
+#     months[i] = calendar.month_name[i]
 
-for x in range(1, 13):
-    temp = float(input(f"Type {months[x]} average temperature: "))
-    monthAvgs.append(temp)
+# for x in range(1, 13):
+#     temp = float(input(f"Type {months[x]} average temperature: "))
+#     monthAvgs.append(temp)
 
-yearAvg = sum(monthAvgs)/len(monthAvgs)
+# yearAvg = sum(monthAvgs)/len(monthAvgs)
 
-for x in range(12):
-    if monthAvgs[x] < yearAvg:
-        print(f"{x+1} - {months[x+1]}")
+# for x in range(12):
+#     if monthAvgs[x] < yearAvg:
+#         print(f"{x+1} - {months[x+1]}")
 
+# Question 15. Use lists to write a code who asks to a person: a) Did you phonecalled the victim?, b) Have you been to the crime scene?, c) Do you live near the victim?,
+# d) Did you owed money to the victim?, e) Have you worked for the victim?.
+# If the person answers YES to: 2 questions --> classified as SUSPECT; 3 to 4 questions --> classified as ACCOMPLICE; 5 questions --> MURDERER.
+# Otherwise, the person must be classified as INNOCENT
+questions = ["Did you phonecalled the victim? Type YES or NO",
+             "Have you been to the crime scene? Type YES or NO",
+             "Do you live near the victim? Type YES or NO",
+             "Did you owed money to the victim? Type YES or NO",
+             "Have you worked for the victim? Type YES or NO"]
+
+answers = []
+
+for x in range(5):
+    answer = input(f"{questions[x]}")
+    answers.append(answer)
+
+count = 0
+
+for x in answers:
+    if x == "YES":
+        count += 1
+
+suspicion = ""
+match count:
+    case 0:
+        suspicion = "INNOCENT"
+    case 1:
+        suspicion = "INNOCENT"
+    case 2:
+        suspicion = "SUSPECT"
+    case 3:
+        suspicion = "ACCOMPLICE"
+    case 4:
+        suspicion = "ACCOMPLICE"
+    case 5:
+        suspicion = "MURDERER"
+
+print(suspicion)
