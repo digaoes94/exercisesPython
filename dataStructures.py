@@ -184,33 +184,55 @@
 # Question 9. A kart track allows 10 laps for each of the 6 runners. Write a program that reads each runner's time in seconds and store these in a dictionary (runner's name as key).
 # By the end, print who had the best lap and which lap it was. Also print the ranking, having the best runner (the one with the smaller average lap time) as first.
 # MAIN STRUCT: dictionary{name, tuple}; SECOND STRUCT: tuple(times[], lowerTime, bestLap, average)
-import math; record = {}; bestTime = math.inf; bestLap = 0; bestRunner = ""
+# import math; record = {}; bestTime = math.inf; bestLap = 0; bestRunner = ""
 
-for x in range(1,7):
-    times = []
-    runner = input(f"Runner n°{x} name: ")
+# for x in range(1,7):
+#     times = []
+#     runner = input(f"Runner n°{x} name: ")
 
-    for y in range(1, 11):
-        time = float(input(f"Inform time in lap{y}: "))
-        times.append(time)
+#     for y in range(1, 11):
+#         time = float(input(f"Inform time in lap{y}: "))
+#         times.append(time)
 
-        if time < bestTime:
-            bestTime = time
-            bestLap = y
-            bestRunner = runner
+#         if time < bestTime:
+#             bestTime = time
+#             bestLap = y
+#             bestRunner = runner
 
-    record[runner] = times
+#     record[runner] = times
 
-ranking = []
-for runner, times in record.items():
-    average = sum(times)/len(times)
-    ranking.append((runner, average))
+# ranking = []
+# for runner, times in record.items():
+#     average = sum(times)/len(times)
+#     ranking.append((runner, average))
 
-ranking.sort(key=lambda x : x[1])
+# ranking.sort(key=lambda x : x[1])
 
-print(f"Best Runner: {bestRunner}. Best Lap time {bestTime} at his {bestLap}° lap.")
+# print(f"Best Runner: {bestRunner}. Best Lap time {bestTime} at his {bestLap}° lap.")
 
-print("Ranking")
-for x, (runner, average) in enumerate(ranking, 1):
-    print(f"N° {x}: {runner} with average lap time of {average:.2f}.")
+# print("Ranking")
+# for x, (runner, average) in enumerate(ranking, 1):
+#     print(f"N° {x}: {runner} with average lap time of {average:.2f}.")
 
+# Question 10. Write a code to store a telephone agenda in a dictionary. Each person may have 1+ phones, and the dictionary's key is the person's name.
+agenda = {}; phones = []
+
+qtd = int(input("Inform how many people you will add: "))
+
+for x in range(qtd):
+    y = True
+    name = input(f"Inform n° {x+1} contact's name: ")
+
+    print("Inform all telephone numbers, one at a time, and type END to proceed to the next contact.")
+    while(y):
+        entry = input()
+
+        if(entry == "END"):
+            y = False
+        else:
+            phones.append(entry)
+    
+    agenda[name] = phones
+    phones = []
+
+print(agenda)
