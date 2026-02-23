@@ -247,17 +247,33 @@
 # print(aList)
 
 # Question 12. Read 10 float numbers and print them in reverse order. Data structure's choice is yours.
-aList = []
+# aList = []
 
-for x in range(10):
-    n = float(input(f"Type entry n° {x+1}: "))
-    aList.append(n)
+# for x in range(10):
+#     n = float(input(f"Type entry n° {x+1}: "))
+#     aList.append(n)
 
-print(f"Original: {aList}")
+# print(f"Original: {aList}")
 
-aList.sort()
-print(f"Sorted: {aList}")
+# aList.sort()
+# print(f"Sorted: {aList}")
 
-aList.reverse()
-print(f"Reverse order: {aList}")
+# aList.reverse()
+# print(f"Reverse order: {aList}")
 
+# Question 13. Store age and height of 30 students, calculate the average height from these 30 students. Find which of these students has age >= 13, height <= average and print them.
+data = []; under = []; tHeight = 0; avgHeight = 0
+
+for x in range(1, 31):
+    age = int(input(f"Type student n{x} age: "))
+    height = float(input(f"Type student n{x} height: "))
+    data.append((age, height))
+
+    tHeight += height
+
+avgHeight = tHeight/len(data)
+
+for age, height in data:
+    if age >= 13 and height < avgHeight:
+        print(f"{age}, {height}")
+        
