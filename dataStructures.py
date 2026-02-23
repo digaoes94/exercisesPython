@@ -188,7 +188,7 @@ import math; record = {}; bestTime = math.inf; bestLap = 0; bestRunner = ""
 
 for x in range(1,7):
     times = []
-    runner = input(f"Runner n{x}name: ")
+    runner = input(f"Runner n°{x} name: ")
 
     for y in range(1, 11):
         time = float(input(f"Inform time in lap{y}: "))
@@ -211,6 +211,6 @@ ranking.sort(key=lambda x : x[1])
 print(f"Best Runner: {bestRunner}. Best Lap time {bestTime} at his {bestLap}° lap.")
 
 print("Ranking")
-for x in range(1, 7):
-    print(f"N° {x}: {ranking[x-1].key()} with average lap time of {ranking[x-1].value()}")
+for x, (runner, average) in enumerate(ranking, 1):
+    print(f"N° {x}: {runner} with average lap time of {average:.2f}.")
 
