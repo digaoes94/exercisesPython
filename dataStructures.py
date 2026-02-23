@@ -238,11 +238,26 @@
 # print(agenda)
 
 # Question 11. Read 5 numbers, then print them. Data structure's choice is yours.
+# aList = []
+
+# for x in range(5):
+#     n = int(input(f"Type entry n° {x+1}: "))
+#     aList.append(n)
+
+# print(aList)
+
+# Question 12. Read 10 float numbers and print them in reverse order. Data structure's choice is yours.
 aList = []
 
-for x in range(5):
-    n = int(input(f"Type entry n° {x+1}: "))
+for x in range(10):
+    n = float(input(f"Type entry n° {x+1}: "))
     aList.append(n)
 
-print(aList)
+print(f"Original: {aList}")
+
+aList.sort()
+print(f"Sorted: {aList}")
+
+aList.reverse()
+print(f"Reverse order: {aList}")
 
