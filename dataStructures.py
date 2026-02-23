@@ -262,18 +262,36 @@
 # print(f"Reverse order: {aList}")
 
 # Question 13. Store age and height of 30 students, calculate the average height from these 30 students. Find which of these students has age >= 13, height <= average and print them.
-data = []; under = []; tHeight = 0; avgHeight = 0
+# data = []; under = []; tHeight = 0; avgHeight = 0
 
-for x in range(1, 31):
-    age = int(input(f"Type student n{x} age: "))
-    height = float(input(f"Type student n{x} height: "))
-    data.append((age, height))
+# for x in range(1, 31):
+#     age = int(input(f"Type student n{x} age: "))
+#     height = float(input(f"Type student n{x} height: "))
+#     data.append((age, height))
 
-    tHeight += height
+#     tHeight += height
 
-avgHeight = tHeight/len(data)
+# avgHeight = tHeight/len(data)
 
-for age, height in data:
-    if age >= 13 and height < avgHeight:
-        print(f"{age}, {height}")
-        
+# for age, height in data:
+#     if age >= 13 and height < avgHeight:
+#         print(f"{age}, {height}")
+
+# Question 14. Write a program that receives the average temperature from each month of a year in order and store them in a list. After that, find the year's average temperature
+# and show all and in which month they happened. Choose a structure to collect your data.
+import calendar; monthAvgs = []; yearAvg = 0
+
+months = {}
+for i in range(1, 13):
+    months[i] = calendar.month_name[i]
+
+for x in range(1, 13):
+    temp = float(input(f"Type {months[x]} average temperature: "))
+    monthAvgs.append(temp)
+
+yearAvg = sum(monthAvgs)/len(monthAvgs)
+
+for x in range(12):
+    if monthAvgs[x] < yearAvg:
+        print(f"{x+1} - {months[x+1]}")
+
