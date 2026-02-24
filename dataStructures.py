@@ -299,37 +299,53 @@
 # d) Did you owed money to the victim?, e) Have you worked for the victim?.
 # If the person answers YES to: 2 questions --> classified as SUSPECT; 3 to 4 questions --> classified as ACCOMPLICE; 5 questions --> MURDERER.
 # Otherwise, the person must be classified as INNOCENT
-questions = ["Did you phonecalled the victim? Type YES or NO",
-             "Have you been to the crime scene? Type YES or NO",
-             "Do you live near the victim? Type YES or NO",
-             "Did you owed money to the victim? Type YES or NO",
-             "Have you worked for the victim? Type YES or NO"]
+# questions = ["Did you phonecalled the victim? Type YES or NO",
+#              "Have you been to the crime scene? Type YES or NO",
+#              "Do you live near the victim? Type YES or NO",
+#              "Did you owed money to the victim? Type YES or NO",
+#              "Have you worked for the victim? Type YES or NO"]
 
-answers = []
+# answers = []
 
-for x in range(5):
-    answer = input(f"{questions[x]}")
-    answers.append(answer)
+# for x in range(5):
+#     answer = input(f"{questions[x]}")
+#     answers.append(answer)
 
-count = 0
+# count = 0
 
-for x in answers:
-    if x == "YES":
-        count += 1
+# for x in answers:
+#     if x == "YES":
+#         count += 1
 
-suspicion = ""
-match count:
-    case 0:
-        suspicion = "INNOCENT"
-    case 1:
-        suspicion = "INNOCENT"
-    case 2:
-        suspicion = "SUSPECT"
-    case 3:
-        suspicion = "ACCOMPLICE"
-    case 4:
-        suspicion = "ACCOMPLICE"
-    case 5:
-        suspicion = "MURDERER"
+# suspicion = ""
+# match count:
+#     case 0:
+#         suspicion = "INNOCENT"
+#     case 1:
+#         suspicion = "INNOCENT"
+#     case 2:
+#         suspicion = "SUSPECT"
+#     case 3:
+#         suspicion = "ACCOMPLICE"
+#     case 4:
+#         suspicion = "ACCOMPLICE"
+#     case 5:
+#         suspicion = "MURDERER"
 
-print(suspicion)
+# print(suspicion)
+
+# Question 16. Write a code that loads a list with 5 car models, and a list with these cars consumptions (km/l). Print: a) the most economic car;
+# b) the cost of 1.000km for each car, considering the gasoline price as R$ 6,25/l.
+import math; x = 0; smaller = 0
+cars = ["Fiat Stilo", "Ford Ka", "Chevrolet Vectra", "Honda Civic", "Volkswagen Golf"]
+consumptions = [12.5, 14.2, 9.8, 11.3, 13.1]
+
+smaller = consumptions.index(max(consumptions))
+print(f"Most economic car: {cars[smaller]}.")
+
+ranking = [(cars[i], 1000/consumptions[i] * 6.25) for i in range(5)]
+ranking.sort(key=lambda x:x[1])
+
+for i in range(5):
+    print(ranking[i])
+
