@@ -336,16 +336,41 @@
 
 # Question 16. Write a code that loads a list with 5 car models, and a list with these cars consumptions (km/l). Print: a) the most economic car;
 # b) the cost of 1.000km for each car, considering the gasoline price as R$ 6,25/l.
-import math; x = 0; smaller = 0
-cars = ["Fiat Stilo", "Ford Ka", "Chevrolet Vectra", "Honda Civic", "Volkswagen Golf"]
-consumptions = [12.5, 14.2, 9.8, 11.3, 13.1]
+# import math; x = 0; smaller = 0
+# cars = ["Fiat Stilo", "Ford Ka", "Chevrolet Vectra", "Honda Civic", "Volkswagen Golf"]
+# consumptions = [12.5, 14.2, 9.8, 11.3, 13.1]
 
-smaller = consumptions.index(max(consumptions))
-print(f"Most economic car: {cars[smaller]}.")
+# smaller = consumptions.index(max(consumptions))
+# print(f"Most economic car: {cars[smaller]}.")
 
-ranking = [(cars[i], 1000/consumptions[i] * 6.25) for i in range(5)]
-ranking.sort(key=lambda x:x[1])
+# ranking = [(cars[i], 1000/consumptions[i] * 6.25) for i in range(5)]
+# ranking.sort(key=lambda x:x[1])
 
-for i in range(5):
-    print(ranking[i])
+# for i in range(5):
+#     print(ranking[i])
 
+# Question 17. Write a code that simulates a D6 dice throw. Throw the dice 100 times and store each result in an array.
+# Print how many times each result occured.
+import array as arr, random
+n1 = 0; n2 = 0; n3 = 0; n4 = 0; n5 = 0; n6 = 0
+results = arr.array('I')
+
+for x in range(100):
+    y = random.randint(1, 6)
+    results.append(y)
+
+    match y:
+        case 1:
+            n1 += 1
+        case 2:
+            n2 += 1
+        case 3:
+            n3 += 1
+        case 4:
+            n4 += 1
+        case 5:
+            n5 += 1
+        case 6:
+            n6 += 1
+
+print(f"Number 1: {n1}\nNumber 2: {n2}\nNumber 3: {n3}\nNumber 4: {n4}\nNumber 5: {n5}\nNumber 6: {n6}\n")
